@@ -1,13 +1,14 @@
 const items = [
-  ['total', 'ทั้งหมด'],
-  ['pending', 'รอดำเนินการ'],
-  ['inProgress', 'กำลังดำเนินการ'],
-  ['completed', 'เสร็จสิ้น'],
+  ['total', 'การจองทั้งหมด'],
+  ['pending', 'รออนุมัติ'],
+  ['approved', 'อนุมัติแล้ว'],
+  ['rejected', 'ปฏิเสธ'],
+  ['cancelled', 'ยกเลิกแล้ว'],
 ];
 
 function SummaryPanel({ summary }) {
   return (
-    <section className="summary-grid" aria-label="สรุปคำร้อง">
+    <section className="summary-grid" aria-label="สรุปการจอง">
       {items.map(([key, label]) => (
         <article className="summary-card" key={key}>
           <span>{label}</span>

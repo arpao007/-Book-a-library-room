@@ -1,6 +1,6 @@
 /**
  * ตัวกลางสำหรับคุยกับ API — ที่เดียวที่เรียก fetch()
- * ทุกฟังก์ชันใน requestService เรียกผ่านตรงนี้
+ * ทุกฟังก์ชันใน bookingService เรียกผ่านตรงนี้
  */
 
 const BASE_URL =
@@ -35,7 +35,7 @@ export async function apiFetch(path, options = {}) {
   };
 
   if (token) {
-    headers.Authorization = `Bearer ${token}`;
+    headers.Authorization = 'Bearer ' + token;
   }
 
   try {
@@ -51,12 +51,12 @@ export async function apiFetch(path, options = {}) {
   }
 
   if (!response.ok) {
-  if (response.status === 401) {
-    localStorage.removeItem('token');
-    window.location.href = '/login';
-  }
+    if (response.status === 401 && path !== '/api/auth/login') {
+      localStorage.removeItem('token');
+      window.location.href = '/login';
+    }
 
-  throw new ApiError(await parseError(response), response.status);
+    throw new ApiError(await parseError(response), response.status);
   }
 
   if (response.status === 204) {
