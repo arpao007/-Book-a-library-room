@@ -1,0 +1,29 @@
+[
+  {
+    "id": "REQ-001",
+    "requesterName": "ณัฐพล แซ่วั่ง",
+    "requestType": "ปรึกษาโครงงาน",
+    "location": "ห้องพักอาจารย์ SW-401",
+    "details": "ขอปรึกษาความคืบหน้าโครงงาน ENGSE203",
+    "priority": "normal",
+    "status": "pending"
+  },
+  {
+    "id": "REQ-002",
+    "requesterName": "สุวิมนต์ ไชยเดช",
+    "requestType": "วางแผนการเรียน",
+    "location": "ห้องพักอาจารย์ SW-401",
+    "details": "ขอคำแนะนำการลงทะเบียนภาคเรียนถัดไป",
+    "priority": "normal",
+    "status": "in-progress"
+  },
+  {
+    "id": "REQ-003",
+    "requesterName": "กิตติศักดิ์ ใจดี",
+    "requestType": "ขอคำปรึกษาวิชาการ",
+    "location": "ห้องพักอาจารย์ SW-402",
+    "details": "สอบถามแนวทางเลือกหัวข้อโครงงาน",
+    "priority": "normal",
+    "status": "completed"
+  }
+]
